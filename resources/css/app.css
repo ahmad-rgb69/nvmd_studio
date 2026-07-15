@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+
+/* ==========================================================
+   PUSAT UTAMA WARNA KUSTOM LU (GANTI DI SINI UNTUK MENGUBAH GLOBAL)
+   ========================================================== */
+:root {
+    --bg-utama: #ffffff;
+    /* Latar belakang utama kertas majalah */
+    --teks-utama: #0f172a;
+    /* Warna teks hitam pekat/slate-900 */
+    --aksen-merah: #ec4e45;
+    /* Warna box merah karang khas poster lu */
+    --teks-pudar: #64748b;
+    /* Warna teks abu-abu pendukung (slate-500) */
+    --garis-tepi: #0f172a;
+    /* Warna garis grid pembatas kotak */
+}
+
+/* MENDAFTARKAN VARIABEL KE DALAM SISTEM UTILITAS TAILWIND v4 */
+@theme {
+    --font-heading: sans-serif;
+    --font-body: sans-serif;
+    --font-tech: monospace;
+
+    /* Mendaftarkan warna agar bisa dibaca class Tailwind (contoh: bg-nvmd-red, text-nvmd-black) */
+    --color-nvmd-bg: var(--bg-utama);
+    --color-nvmd-black: var(--teks-utama);
+    --color-nvmd-red: var(--aksen-merah);
+    --color-nvmd-muted: var(--teks-pudar);
+    --color-nvmd-line: var(--garis-tepi);
+
+    --animate-star-pulse: starTwinkle 2s ease-in-out infinite;
+}
+
+/* UTILITAS KUSTOM & ANIMASI */
+@layer utilities {
+
+    /* Saat teks diblok/dihighlight: background merah cerah, tulisan jadi putih solid */
+    ::selection {
+        background-color: var(--aksen-merah);
+        color: #ffffff;
+    }
+
+
+
+
+    /* 1. KELAS UNTUK HOVER & CLICK DI TOMBOL DENGAN SHADOW HITAM */
+    .nvmd-btn-interactive-black {
+        /* Setel transisi agar pergerakan mulus & responsif */
+        transition: transform 0.1s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+        /* Kondisi default menggunakan shadow hitam kustom lu */
+        box-shadow: 4px 4px 0px 0px var(--teks-utama);
+    }
+
+    /* Efek saat mouse mendekat/Hover (Tombol naik sedikit, shadow membesar) */
+    .nvmd-btn-interactive-black:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px 0px var(--teks-utama);
+    }
+
+    /* REQUEST LU: Efek saat DIPENCET/Klik/Active (Tombol tertekan ke bawah, shadow menipis seperti di video) */
+    .nvmd-btn-interactive-black:active {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--teks-utama);
+    }
+
+
+    /* 2. KELAS UNTUK HOVER & CLICK DI TOMBOL DENGAN SHADOW MERAH */
+    .nvmd-btn-interactive-red {
+        transition: transform 0.1s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+        box-shadow: 4px 4px 0px 0px var(--aksen-merah);
+    }
+
+    .nvmd-btn-interactive-red:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0px 0px var(--aksen-merah);
+    }
+
+    .nvmd-btn-interactive-red:active {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px var(--aksen-merah);
+    }
+
+
+
+    /* Bayangan Kotak Tegas Khas Poster Majalah Jepang */
+    .nvmd-shadow-black {
+        box-shadow: 4px 4px 0px 0px var(--teks-utama);
+    }
+
+    .nvmd-shadow-red {
+        box-shadow: 4px 4px 0px 0px var(--aksen-merah);
+    }
+
+    /* Keyframes Animasi Bintang After Effects Lu */
+    @keyframes starTwinkle {
+
+        0%,
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.3;
+            transform: scale(0.95);
+        }
+    }
+}
