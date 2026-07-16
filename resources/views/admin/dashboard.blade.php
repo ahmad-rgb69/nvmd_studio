@@ -8,6 +8,7 @@
 
         <!-- Panggil CSS Pusat -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="icon" type="image/png" href="{{ asset('mini.png') }}">
     </head>
     <body class="antialiased bg-slate-50 text-nvmd-black font-body min-h-screen overflow-x-hidden">
 

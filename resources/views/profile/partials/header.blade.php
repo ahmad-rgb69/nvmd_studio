@@ -3,7 +3,7 @@
         
         {{-- LOGO: icon.png → kembali ke home --}}
         <a href="{{ Request::getBaseUrl() ?: '/' }}" class="logo-home-btn flex-shrink-0">
-            <img src="{{ Request::getBaseUrl() }}/icon.png" alt="Nevermind Studio" class="logo-icon w-12 h-12 object-contain transition-all duration-300">
+            <img src="{{ Request::getBaseUrl() }}/icon.png" alt="Nevermind Studio" class="logo-icon w-40 h-12 object-contain transition-all duration-300">
         </a>
         
         <div class="hidden md:flex space-x-8 text-nvmd-muted">
@@ -75,15 +75,15 @@
                     </button>
                     
                     <div class="absolute right-0 mt-2 w-52 bg-nvmd-bg border-2 border-nvmd-line shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[999]">
-                        <a href="{{ url('/profile') }}" class="block px-4 py-2 hover:bg-nvmd-red hover:text-white font-bold border-b-2 border-nvmd-line">profile</a>
+                        <a href="{{ url('/profile') }}" class="block px-4 py-2 hover:bg-nvmd-red hover:text-white font-bold border-b-2 border-nvmd-line">profile ✦ ✦</a>
                         
                         @if(auth()->user()->isAdmin())
-                            <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 hover:bg-nvmd-red hover:text-white font-bold border-b-2 border-nvmd-line">admin_dashboard</a>
+                            <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 hover:bg-nvmd-red hover:text-white font-bold border-b-2 border-nvmd-line">✦ admin_dashboard</a>
                         @endif
                         
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <button type="submit" class="w-full text-left px-4 py-2 hover:bg-nvmd-red hover:text-white font-bold">log_out</button>
+                            <button type="submit" class="w-full text-left px-4 py-2 hover:bg-nvmd-red hover:text-white font-bold">✦ log_out ✦</button>
                         </form>
                     </div>
                 </div>

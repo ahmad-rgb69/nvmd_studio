@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Log In - NVMD_STUDIO*</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/png" href="{{ asset('mini.png') }}">
 </head>
 <body class="bg-nvmd-bg text-nvmd-black min-h-screen flex flex-col items-center justify-center p-2">
 

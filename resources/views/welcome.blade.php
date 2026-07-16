@@ -7,6 +7,7 @@
 
         <!-- Panggil CSS Pusat -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="icon" type="image/png" href="{{ asset('mini.png') }}">
     </head>
     <body class="antialiased bg-slate-50 text-nvmd-black font-body min-h-screen overflow-x-hidden">
 
@@ -92,7 +93,7 @@
             <section id="services" class="border-b-2 border-nvmd-line bg-nvmd-bg">
                 <div class="border-b-2 border-nvmd-line px-6 py-4 bg-slate-50 flex justify-between items-center font-tech text-xs">
                     <span class="text-nvmd-muted uppercase tracking-widest">[ SECTION_01 // KAPABILITAS_STUDIO ]</span>
-                    <span class="text-nvmd-red">✦ ✦ ✦</span>
+                    <span class="text-nvmd-red">✦ ✦</span>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 font-tech divide-y-2 md:divide-y-0 md:divide-x-2 divide-nvmd-line">
@@ -124,7 +125,7 @@
             <section id="workflow" class="bg-nvmd-bg border-b-2 border-nvmd-line">
                 <div class="border-b-2 border-nvmd-line px-6 py-4 bg-slate-50 flex justify-between items-center font-tech text-xs">
                     <span class="text-nvmd-muted uppercase tracking-widest">[ SECTION_02 // ARSITEKTUR_PROSES ]</span>
-                    <span class="font-bold text-nvmd-black">*</span>
+                    <span class="text-nvmd-red">✦ ✦ ✦</span>
                 </div>
 
                 <div class="p-8 sm:p-12 md:p-16 max-w-4xl">
