@@ -5,22 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Nevermind — Jasa Booking Edit Video Profesional</title>
 
-        <!-- Panggil CSS Pusat -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="icon" type="image/png" href="{{ asset('mini.png') }}">
     </head>
     <body class="antialiased bg-slate-50 text-nvmd-black font-body min-h-screen overflow-x-hidden">
 
-        <!-- MANGGIL HEADER YANG UDAH DIPISAH -->
         @include('profile.partials.header')
 
-        <!-- BINGKAI MAJALAH -->
         <div class="max-w-[1400px] mx-auto border-x-2 border-nvmd-line bg-nvmd-bg">
             
-            <!-- 1. HERO SECTION -->
             <section class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-4rem)] border-b-2 border-nvmd-line">
                 
-                <!-- SISI KIRI: RED BOX PORTFOLIO KATAKANA -->
                 <a href="{{ Request::getBaseUrl() }}/portfolio" class="lg:col-span-5 bg-nvmd-red p-8 flex flex-col justify-between relative overflow-hidden min-h-[450px] lg:min-h-0 border-b-2 border-nvmd-line lg:border-b-0 lg:border-r-2 text-white group cursor-pointer">
                     <div class="font-tech text-xs tracking-widest opacity-90 uppercase transition-transform group-hover:translate-x-1 duration-200">
                         // CLICK_TO_ENTER_GALLERY // ギャラリー
@@ -38,7 +33,6 @@
                     </div>
                 </a>
 
-                <!-- SISI KANAN: TEXT TYPOGRAPHY -->
                 <div class="lg:col-span-7 flex flex-col justify-between bg-nvmd-bg">
                     <div class="p-8 sm:p-12 md:p-16">
                         <div class="flex items-center font-tech text-xs">
@@ -56,8 +50,6 @@
                             <span>* </span>
                         </h1>
 
-
-                        <!-- TOMBOL CTA PINDAH KE SINI DAN DI BIKIN KE TENGAH -->
                         <div class="mt-12 flex justify-center w-full">
                             <div class="w-full max-w-md">
                                 @auth
@@ -89,7 +81,6 @@
                 </div>
             </section>
 
-            <!-- 2. SERVICES SECTION -->
             <section id="services" class="border-b-2 border-nvmd-line bg-nvmd-bg">
                 <div class="border-b-2 border-nvmd-line px-6 py-4 bg-slate-50 flex justify-between items-center font-tech text-xs">
                     <span class="text-nvmd-muted uppercase tracking-widest">[ SECTION_01 // KAPABILITAS_STUDIO ]</span>
@@ -121,7 +112,6 @@
                 </div>
             </section>
 
-            <!-- 3. WORKFLOW SECTION -->
             <section id="workflow" class="bg-nvmd-bg border-b-2 border-nvmd-line">
                 <div class="border-b-2 border-nvmd-line px-6 py-4 bg-slate-50 flex justify-between items-center font-tech text-xs">
                     <span class="text-nvmd-muted uppercase tracking-widest">[ SECTION_02 // ARSITEKTUR_PROSES ]</span>
@@ -159,7 +149,6 @@
                 </div>
             </section>
 
-            <!-- 4. FOOTER -->
             <footer class="bg-nvmd-black text-slate-400 py-12 px-8 font-tech text-xs">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="flex items-center space-x-2 text-white">

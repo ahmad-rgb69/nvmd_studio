@@ -1,66 +1,114 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
+  <br>
+  <h1>🎬 Nevermind Studio</h1>
+  <p>
+    <strong>Video Editing Booking & Order Management System</strong><br>
+    <em>Platform digital interaktif untuk memesan, memantau, dan mengelola jasa penyuntingan video profesional secara real-time.</em>
+  </p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/Alpine.js-8BC0D0?style=for-the-badge&logo=alpine.js&logoColor=white" alt="Alpine JS" />
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  </p>
+</div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+## 📖 Tentang Nevermind Studio
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Nevermind Studio** adalah aplikasi web berbasis *Laravel* yang dirancang sebagai sistem manajemen pemesanan (*booking*) dan pelacakan order penyuntingan video. Aplikasi ini menjembatani komunikasi antara *Client* (pembuat konten) dengan *Editor* secara praktis. Client dapat mengirimkan detail brief proyek, link materi mentah (seperti Google Drive/Dropbox), dan memantau status pengerjaan secara langsung. Di sisi lain, *Admin/Editor* dapat memperbarui status pengerjaan pesanan dan menyerahkan tautan video final setelah selesai diedit.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 🔒 **Role-based Authentication**: Hak akses yang terbagi tegas antara **Client** (akses untuk booking proyek baru dan melacak progres) dan **Admin** (kontrol penuh untuk pengelolaan pesanan).
+- 📁 **Manajemen Booking Project (CRUD)**: Client memiliki kontrol penuh untuk memesan jasa edit baru, memodifikasi detail brief (selama status *pending*), dan membatalkan pesanan.
+- 📊 **Dashboard Administrator**: Panel kendali terpusat bagi Admin untuk melihat daftar pesanan masuk, merubah status (*pending*, *in progress*, *completed*), dan menginput link video final yang sudah selesai.
+- 🎨 **Galeri Portofolio Interaktif**: Galeri portofolio interaktif bergaya poster brutalist Jepang modern lengkap dengan slider custom scrollbar, efek parallax arsiran garis miring, pemutaran detail, serta rincian analitik video (views, likes, comments).
+- 📱 **Desain Brutalist Modern & Responsif**: Tampilan antarmuka berestetika premium yang nyaman diakses melalui komputer maupun perangkat *mobile*.
 
-## Learning Laravel
+## 🛠️ Tech Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend**: Laravel 11 (PHP 8.2+)
+- **Frontend**: Tailwind CSS, Alpine.js, Vanilla JS, Blade Components
+- **Database**: SQLite / MySQL (Database Agnostic)
+- **Asset Bundler**: Vite v6
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Panduan Instalasi (Lokal)
 
-## Laravel Sponsors
+Ikuti langkah-langkah di bawah ini untuk menjalankan project Nevermind Studio di komputer lokal Anda.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Prasyarat
+Pastikan komputer Anda sudah memiliki:
+- [PHP](https://www.php.net/) >= 8.2
+- [Composer](https://getcomposer.org/)
+- [Node.js & NPM](https://nodejs.org/)
+- Web Server lokal (seperti Laragon, XAMPP, atau Laravel Herd)
 
-### Premium Partners
+### Langkah-Langkah
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/username-kamu/nevermind.git
+   cd nevermind
+   ```
 
-## Contributing
+2. **Instalasi Dependensi PHP**
+   ```bash
+   composer install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Instalasi Dependensi Frontend**
+   ```bash
+   npm install
+   ```
 
-## Code of Conduct
+4. **Konfigurasi Environment**
+   Salin file konfigurasi `.env.example` menjadi `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   *Catatan: Secara default, project ini dikonfigurasi menggunakan database SQLite. Jika menggunakan SQLite, pastikan konfigurasi di `.env` sudah mengarah ke file database SQLite kosong.*
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Generate App Key**
+   ```bash
+   php artisan key:generate
+   ```
 
-## Security Vulnerabilities
+6. **Migrasi Database & Seeder**
+   Jalankan migrasi tabel database sekaligus mengisi data bawaan untuk testing:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Kompilasi Aset Frontend**
+   Kompilasi aset menggunakan Vite:
+   ```bash
+   npm run build
+   ```
 
-## License
+8. **Jalankan Server Lokal**
+   ```bash
+   php artisan serve
+   ```
+   Aplikasi Anda sekarang dapat diakses melalui browser di alamat `http://127.0.0.1:8000`.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🔑 Akun Uji Coba (Default Credentials)
+
+Gunakan akun di bawah ini untuk masuk ke sistem setelah menjalankan database seeder:
+
+*   **Administrator Account**
+    *   Email: `admin@nevermind.com`
+    *   Password: `password`
+    *   *Role*: Akses dashboard admin untuk mengelola semua pesanan.
+
+*   **Client Account**
+    *   Email: `client@nevermind.com` (atau buat akun baru melalui menu register)
+    *   Password: `password`
+    *   *Role*: Mengajukan pesanan dan memantau status project pribadi.

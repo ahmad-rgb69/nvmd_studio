@@ -17,7 +17,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('profile.partials.header') <!-- @include ('layouts.navigation') -->
+            @include('profile.partials.header')
 
             <!-- Page Heading -->
             <!--@isset($header)

@@ -6,16 +6,13 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Client Dashboard — nevermind.</title>
 
-        <!-- Panggil CSS Pusat -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="icon" type="image/png" href="{{ asset('mini.png') }}">
     </head>
     <body class="antialiased bg-slate-50 text-nvmd-black font-body min-h-screen overflow-x-hidden">
 
-        <!-- MANGGIL HEADER YANG UDAH DIPISAH -->
         @include('profile.partials.header')
 
-        <!-- BINGKAI MAJALAH -->
         <div class="max-w-[1400px] mx-auto border-x-2 border-nvmd-line bg-nvmd-bg min-h-[calc(100vh-4rem)]">
             
             <!-- HEADER SECTION -->

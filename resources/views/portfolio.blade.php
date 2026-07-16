@@ -16,27 +16,19 @@
     </head>
     <body class="antialiased bg-nvmd-bg text-nvmd-black font-body min-h-screen overflow-x-hidden">
 
-        {{-- HEADER --}}
         @include('profile.partials.header')
 
-        {{-- BINGKAI MAJALAH --}}
         <div class="max-w-[1400px] mx-auto border-x-2 border-nvmd-line bg-nvmd-bg">
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- 1. HERO SECTION                                    --}}
-            {{-- ══════════════════════════════════════════════════ --}}
             <section class="relative border-b-2 border-nvmd-line overflow-hidden">
 
-                {{-- Label navigasi atas --}}
                 <div class="border-b-2 border-nvmd-line px-6 py-3 bg-slate-50 flex justify-between items-center font-tech text-xs">
                     <span class="text-nvmd-muted uppercase tracking-widest">[ PAGE // PORT-FOLIO_STUDIO ]</span>
                     <a href="{{ Request::getBaseUrl() ?: '/' }}" class="text-nvmd-red hover:text-nvmd-black transition-colors font-bold tracking-widest">← KEMBALI_HOME</a>
                 </div>
 
-                {{-- Konten hero --}}
                 <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[380px]">
 
-                    {{-- Kolom kiri: red box Jepang --}}
                     <div class="lg:col-span-4 bg-nvmd-red p-8 flex flex-col justify-between relative overflow-hidden min-h-[380px] border-b-2 lg:border-b-0 lg:border-r-2 border-nvmd-line text-white">
                         <div class="font-tech text-xs tracking-widest opacity-90 uppercase">
                             // CLICK_TO_ENTER_GALLERY // ギャラリー
@@ -55,7 +47,6 @@
                         </div>
                     </div>
 
-                    {{-- Kolom kanan: copy --}}
                     <div class="lg:col-span-8 flex flex-col justify-between p-10 sm:p-14 bg-nvmd-bg">
                         <div>
                             <div class="font-tech text-xs text-nvmd-muted mb-6 tracking-widest">
@@ -84,23 +75,16 @@
                 </div>
             </section>
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- 2. LABEL SECTION                                   --}}
-            {{-- ══════════════════════════════════════════════════ --}}
             <div class="border-b-2 border-nvmd-line px-6 py-4 bg-slate-50 flex justify-between items-center font-tech text-xs sticky top-16 z-40">
                 <span class="text-nvmd-muted uppercase tracking-widest">[ SECTION_03 // GALERI_KARYA ]</span>
                 <span class="text-nvmd-red">✦ ✦ ✦</span>
             </div>
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- 3. GRID PORTOFOLIO HORIZONTAL                     --}}
-            {{-- ══════════════════════════════════════════════════ --}}
             <section class="px-6 sm:px-8 pt-6 sm:pt-8 pb-10 border-b-2 border-nvmd-line" id="portfolio-grid">
 
                 <div class="portfolio-scroll-container overflow-x-auto py-6 cursor-grab active:cursor-grabbing select-none scrollbar-hide" id="portfolioScroller" style="scrollbar-width:none; -ms-overflow-style:none;">
                     <div class="flex gap-6" style="width: max-content;" id="portfolioCards">
 
-                        {{-- KARYA 01 --}}
                         <button type="button" id="card-0"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="0"
@@ -133,7 +117,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 02 --}}
                         <button type="button" id="card-1"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="1"
@@ -166,7 +149,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 03 --}}
                         <button type="button" id="card-2"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="2"
@@ -199,7 +181,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 04 --}}
                         <button type="button" id="card-3"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="3"
@@ -232,7 +213,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 05 --}}
                         <button type="button" id="card-4"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="4"
@@ -265,7 +245,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 06 --}}
                         <button type="button" id="card-5"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="5"
@@ -298,7 +277,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 07 --}}
                         <button type="button" id="card-6"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="6"
@@ -331,7 +309,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 08 --}}
                         <button type="button" id="card-7"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="7"
@@ -364,7 +341,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 09 --}}
                         <button type="button" id="card-8"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="8"
@@ -397,7 +373,6 @@
                             </div>
                         </button>
 
-                        {{-- KARYA 10 --}}
                         <button type="button" id="card-9"
                             class="portfolio-card group relative flex-shrink-0 w-64 sm:w-72 border-2 border-nvmd-line bg-nvmd-bg hover:border-nvmd-red transition-all duration-200 text-left focus:outline-none nvmd-shadow-black hover:shadow-[6px_6px_0px_0px_var(--aksen-merah)]"
                             data-index="9"
@@ -430,28 +405,23 @@
                             </div>
                         </button>
 
-                    </div>{{-- /portfolioCards --}}
-                </div>{{-- /portfolioScroller --}}
+                    </div>
+                </div>
 
-                {{-- Custom Scrollbar --}}
                 <div class="mt-6 flex items-center gap-4 group/scrollwrapper" id="portfolioScrollbarWrapper">
                     <span class="font-tech text-[9px] text-nvmd-muted tracking-widest shrink-0 select-none">← SCROLL →</span>
 
-                    {{-- Track --}}
                     <div class="relative flex-1 h-[8px] group-hover/scrollwrapper:h-[12px] border-2 border-nvmd-line bg-white overflow-hidden cursor-pointer transition-all duration-200 hover:bg-slate-50" id="scrollbarTrack">
-                        {{-- Striped texture inside track --}}
                         <div id="scrollbarTrackStripes" class="absolute inset-0 opacity-10"
                             style="background-image: repeating-linear-gradient(45deg, var(--teks-utama) 0px, var(--teks-utama) 2px, transparent 2px, transparent 10px); background-position-x: 0px;"
                         ></div>
 
-                        {{-- Thumb --}}
                         <div id="scrollbarThumb"
                             class="absolute top-0 h-full bg-nvmd-red border-x-2 border-nvmd-line
                                    transition-[background-color,transform] duration-200 cursor-grab active:cursor-grabbing
                                    group-hover/scrollwrapper:bg-nvmd-black"
                             style="left:0%; width:20%; will-change:left,width;"
                         >
-                            {{-- Thumb inner texture lines --}}
                             <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 flex gap-[3px] items-center">
                                 <div class="w-[1.5px] h-[3px] group-hover/scrollwrapper:h-[5px] bg-white opacity-70 transition-all duration-200"></div>
                                 <div class="w-[1.5px] h-[3px] group-hover/scrollwrapper:h-[5px] bg-white opacity-70 transition-all duration-200"></div>
@@ -463,20 +433,15 @@
                     <span class="font-tech text-[9px] text-nvmd-muted tracking-widest shrink-0 select-none" id="scrollbarPct">00%</span>
                 </div>
 
-                {{-- Hint label --}}
                 <p class="mt-2 font-tech text-[10px] text-nvmd-muted tracking-wider select-none">
                     KLIK KARTU UNTUK DETAIL
                 </p>
             </section>
 
-            {{-- ══════════════════════════════════════════════════ --}}
-            {{-- 4. DETAIL PANEL                                   --}}
-            {{-- ══════════════════════════════════════════════════ --}}
             <section id="portfolio-detail"
                 class="border-b-2 border-nvmd-line overflow-hidden"
                 style="max-height:0; opacity:0; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;">
 
-                {{-- Bar atas panel --}}
                 <div class="border-b-2 border-nvmd-line px-6 py-3 bg-slate-50 flex justify-between items-center font-tech text-xs">
                     <span class="text-nvmd-muted uppercase tracking-widest">[ DETAIL // KARYA_TERPILIH ]</span>
                     <button id="detail-close"
@@ -487,7 +452,6 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-12">
 
-                    {{-- Thumbnail besar --}}
                     <div class="lg:col-span-5 relative overflow-hidden bg-nvmd-black border-b-2 lg:border-b-0 lg:border-r-2 border-nvmd-line" style="min-height:280px;">
                         <img id="detail-thumb" src="" alt="Detail thumbnail" class="w-full h-full object-cover">
                         <div class="absolute bottom-4 left-4 font-tech text-xs bg-nvmd-black/85 text-white border border-nvmd-line px-3 py-1">
@@ -585,11 +549,8 @@
                 </div>
             </footer>
 
-        </div>{{-- /bingkai majalah --}}
+        </div>
 
-        {{-- ══════════════════════════════════════════════════════ --}}
-        {{-- JAVASCRIPT                                            --}}
-        {{-- ══════════════════════════════════════════════════════ --}}
         <script>
         (function () {
             'use strict';
