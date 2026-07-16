@@ -53,8 +53,8 @@ Pastikan komputer Anda sudah memiliki:
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/username-kamu/nevermind.git
-   cd nevermind
+   git clone https://github.com/ahmad_rgb69/nvmd_studio.git
+   cd nvmd_studio
    ```
 
 2. **Instalasi Dependensi PHP**
