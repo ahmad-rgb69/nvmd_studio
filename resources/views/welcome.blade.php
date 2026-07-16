@@ -20,7 +20,7 @@
             <section class="grid grid-cols-1 lg:grid-cols-12 min-h-[calc(100vh-4rem)] border-b-2 border-nvmd-line">
                 
                 <!-- SISI KIRI: RED BOX PORTFOLIO KATAKANA -->
-                <a href="/portfolio" class="lg:col-span-5 bg-nvmd-red p-8 flex flex-col justify-between relative overflow-hidden min-h-[450px] lg:min-h-0 border-b-2 border-nvmd-line lg:border-b-0 lg:border-r-2 text-white group cursor-pointer">
+                <a href="{{ Request::getBaseUrl() }}/portfolio" class="lg:col-span-5 bg-nvmd-red p-8 flex flex-col justify-between relative overflow-hidden min-h-[450px] lg:min-h-0 border-b-2 border-nvmd-line lg:border-b-0 lg:border-r-2 text-white group cursor-pointer">
                     <div class="font-tech text-xs tracking-widest opacity-90 uppercase transition-transform group-hover:translate-x-1 duration-200">
                         // CLICK_TO_ENTER_GALLERY // ギャラリー
                     </div>

@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/portfolio', function () {
+    return view('portfolio');
+})->name('portfolio.index');
+
 // ─── Authenticated Client Routes ─────────────────────────
 Route::middleware(['auth', 'verified'])->group(function () {
 

@@ -1,10 +1,10 @@
 <header class="border-b-2 border-nvmd-line bg-nvmd-bg sticky top-0 z-50">
     <div class="max-w-[1400px] mx-auto flex items-center justify-between h-16 px-6 font-tech text-xs tracking-wider">
         
-        <div class="flex items-center space-x-2">
-            <span class="text-nvmd-red text-lg animate-star-pulse">✦</span>
-            <span class="font-bold tracking-widest text-nvmd-black">nvmd_studio*</span>
-        </div>
+        {{-- LOGO: icon.png → kembali ke home --}}
+        <a href="{{ Request::getBaseUrl() ?: '/' }}" class="logo-home-btn flex-shrink-0">
+            <img src="{{ Request::getBaseUrl() }}/icon.png" alt="Nevermind Studio" class="logo-icon w-12 h-12 object-contain transition-all duration-300">
+        </a>
         
         <div class="hidden md:flex space-x-8 text-nvmd-muted">
             @auth
@@ -20,15 +20,21 @@
                     <span class="group-hover:translate-x-1.5 transition-transform">]</span>
                 </a>
 
+                <a href="{{ Request::getBaseUrl() }}/portfolio" class="group inline-flex items-center font-bold tracking-wider transition-colors duration-250 gap-1 {{ request()->is('*/portfolio') || request()->is('portfolio') ? 'text-nvmd-black' : 'hover:text-nvmd-black' }}">
+                    <span class="group-hover:-translate-x-1.5 transition-transform">[</span>
+                    <span class="group-hover:scale-105 transition-transform">03 // portfolio</span>
+                    <span class="group-hover:translate-x-1.5 transition-transform">]</span>
+                </a>
+
                 <a href="{{ url('/dashboard') }}" class="group inline-flex items-center font-bold tracking-wider transition-colors duration-250 gap-1 {{ request()->is('dashboard') ? 'text-nvmd-black' : 'hover:text-nvmd-black' }}">
                     <span class="group-hover:-translate-x-1.5 transition-transform">[</span>
-                    <span class="group-hover:scale-105 transition-transform">03 // dashboard</span>
+                    <span class="group-hover:scale-105 transition-transform">04 // dashboard</span>
                     <span class="group-hover:translate-x-1.5 transition-transform">]</span>
                 </a>
                 
                 <a href="{{ url('/orders/create') }}" class="group inline-flex items-center font-bold tracking-wider transition-colors duration-250 gap-1 {{ request()->is('orders/create') ? 'text-nvmd-black' : 'hover:text-nvmd-black' }}">
                     <span class="group-hover:-translate-x-1.5 transition-transform">[</span>
-                    <span class="group-hover:scale-105 transition-transform">04 // booking_project</span>
+                    <span class="group-hover:scale-105 transition-transform">05 // booking_project</span>
                     <span class="group-hover:translate-x-1.5 transition-transform">]</span>
                 </a>
 
@@ -49,6 +55,12 @@
                 <a href="{{ url('/#workflow') }}" class="group inline-flex items-center font-bold tracking-wider hover:text-nvmd-black transition-colors duration-250 gap-1">
                     <span class="group-hover:-translate-x-1.5 transition-transform">[</span>
                     <span class="group-hover:scale-105 transition-transform">02 // alur_kerja</span>
+                    <span class="group-hover:translate-x-1.5 transition-transform">]</span>
+                </a>
+
+                <a href="{{ Request::getBaseUrl() }}/portfolio" class="group inline-flex items-center font-bold tracking-wider transition-colors duration-250 gap-1 {{ request()->is('*/portfolio') || request()->is('portfolio') ? 'text-nvmd-black' : 'hover:text-nvmd-black' }}">
+                    <span class="group-hover:-translate-x-1.5 transition-transform">[</span>
+                    <span class="group-hover:scale-105 transition-transform">03 // portfolio</span>
                     <span class="group-hover:translate-x-1.5 transition-transform">]</span>
                 </a>
             @endauth
